@@ -51,12 +51,36 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.all(8.0),
                     child: Column(
                       children: [
+                        Text("Height"),
                         Text(
                           "176",
                           style: TextStyle(
-                              color: Color.fromARGB(255, 197, 16, 16)),
+                            color: Color.fromARGB(255, 197, 16, 16),
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                        Text("Male")
+                        Row(
+                          children: [
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(
+                                Icons.remove,
+                                size: 40,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(
+                                Icons.add,
+                                size: 40,
+                              ),
+                            )
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -65,11 +89,36 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Icon(
-                          Icons.female,
-                          size: 150,
+                        Text("Weight"),
+                        Text(
+                          "176",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 197, 16, 16),
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                        Text("FeMale")
+                        Row(
+                          children: [
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(
+                                Icons.remove,
+                                size: 40,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            FloatingActionButton(
+                              onPressed: null,
+                              child: Icon(
+                                Icons.add,
+                                size: 40,
+                              ),
+                            )
+                          ],
+                        ),
                       ],
                     ),
                   ),

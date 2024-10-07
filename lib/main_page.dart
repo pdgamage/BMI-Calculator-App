@@ -15,9 +15,10 @@ class _MainPageState extends State<MainPage> {
       body: SafeArea(
         child: Container(
           color: const Color.fromARGB(255, 255, 255, 255),
-          child: const Column(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.all(8.0),
@@ -46,7 +47,10 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ],
               ),
-              Row(
+              const SizedBox(
+                height: 50,
+              ),
+              const Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.all(8.0),
@@ -55,11 +59,7 @@ class _MainPageState extends State<MainPage> {
                         Text("Height"),
                         Text(
                           "176",
-                          style: TextStyle(
-                            color: kTextColor,
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: kInputLabelColor,
                         ),
                         Row(
                           children: [
@@ -93,11 +93,7 @@ class _MainPageState extends State<MainPage> {
                         Text("Weight"),
                         Text(
                           "76",
-                          style: TextStyle(
-                            color: kTextColor,
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: kInputLabelColor,
                         ),
                         Row(
                           children: [
@@ -125,10 +121,14 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ],
               ),
+              const SizedBox(height: 100),
               Column(
                 children: [
-                  Text("BMI"),
-                  Text("22.56"),
+                  const Text("BMI"),
+                  Text(
+                    "22.56",
+                    style: kInputLabelColor.copyWith(color: kTextOutColor),
+                  ),
                 ],
               ),
             ],

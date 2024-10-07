@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -55,7 +56,7 @@ class _MainPageState extends State<MainPage> {
                         Text(
                           "176",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 197, 16, 16),
+                            color: kTextColor,
                             fontSize: 50,
                             fontWeight: FontWeight.bold,
                           ),
@@ -93,7 +94,7 @@ class _MainPageState extends State<MainPage> {
                         Text(
                           "76",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 197, 16, 16),
+                            color: kTextColor,
                             fontSize: 50,
                             fontWeight: FontWeight.bold,
                           ),

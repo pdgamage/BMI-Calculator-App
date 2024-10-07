@@ -44,7 +44,37 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ],
-              )
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          "176",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 197, 16, 16)),
+                        ),
+                        Text("Male")
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.female,
+                          size: 150,
+                        ),
+                        Text("FeMale")
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

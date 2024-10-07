@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
                       children: [
                         Text("Weight"),
                         Text(
-                          "176",
+                          "76",
                           style: TextStyle(
                             color: Color.fromARGB(255, 197, 16, 16),
                             fontSize: 50,
@@ -122,6 +122,12 @@ class _MainPageState extends State<MainPage> {
                       ],
                     ),
                   ),
+                ],
+              ),
+              Column(
+                children: [
+                  Text("BMI"),
+                  Text("22.56"),
                 ],
               ),
             ],

@@ -69,7 +69,9 @@ class _MainPageState extends State<MainPage> {
                             FloatingActionButton(
                               onPressed: () {
                                 setState(() {
-                                  height--;
+                                  if (height > 50) {
+                                    height--;
+                                  }
                                 });
                               },
                               child: const Icon(
@@ -83,7 +85,9 @@ class _MainPageState extends State<MainPage> {
                             FloatingActionButton(
                               onPressed: () {
                                 setState(() {
-                                  height++;
+                                  if (height < 220) {
+                                    height++;
+                                  }
                                 });
                               },
                               child: const Icon(
@@ -97,30 +101,42 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                   const Spacer(),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Text("Weight"),
+                        const Text("Weight"),
                         Text(
-                          "76",
+                          "$weight",
                           style: kInputLabelColor,
                         ),
                         Row(
                           children: [
                             FloatingActionButton(
-                              onPressed: null,
-                              child: Icon(
+                              onPressed: () {
+                                setState(() {
+                                  if (weight > 3) {
+                                    weight--;
+                                  }
+                                });
+                              },
+                              child: const Icon(
                                 Icons.remove,
                                 size: 40,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20,
                             ),
                             FloatingActionButton(
-                              onPressed: null,
-                              child: Icon(
+                              onPressed: () {
+                                setState(() {
+                                  if (weight < 200) {
+                                    weight++;
+                                  }
+                                });
+                              },
+                              child: const Icon(
                                 Icons.add,
                                 size: 40,
                               ),

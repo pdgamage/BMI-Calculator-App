@@ -9,6 +9,9 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int height = 150;
+  int weight = 70;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,32 +53,40 @@ class _MainPageState extends State<MainPage> {
               const SizedBox(
                 height: 50,
               ),
-              const Row(
+              Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Text("Height"),
+                        const Text("Height"),
                         Text(
-                          "176",
+                          "$height",
                           style: kInputLabelColor,
                         ),
                         Row(
                           children: [
                             FloatingActionButton(
-                              onPressed: null,
-                              child: Icon(
+                              onPressed: () {
+                                setState(() {
+                                  height--;
+                                });
+                              },
+                              child: const Icon(
                                 Icons.remove,
                                 size: 40,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20,
                             ),
                             FloatingActionButton(
-                              onPressed: null,
-                              child: Icon(
+                              onPressed: () {
+                                setState(() {
+                                  height++;
+                                });
+                              },
+                              child: const Icon(
                                 Icons.add,
                                 size: 40,
                               ),
@@ -85,8 +96,8 @@ class _MainPageState extends State<MainPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  Padding(
+                  const Spacer(),
+                  const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Column(
                       children: [

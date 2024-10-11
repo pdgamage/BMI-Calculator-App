@@ -127,7 +127,8 @@ class _MainPageState extends State<MainPage> {
                   const Text("BMI"),
                   Text(
                     "22.56",
-                    style: kInputLabelColor.copyWith(color: kTextOutColor),
+                    style: kInputLabelColor.copyWith(
+                        color: kTextOutColor, fontSize: 60),
                   ),
                 ],
               ),

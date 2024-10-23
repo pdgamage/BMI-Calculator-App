@@ -12,6 +12,8 @@ class _MainPageState extends State<MainPage> {
   int height = 150;
   int weight = 70;
 
+  double bmi = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,5 +166,9 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
     );
+  }
+
+  double calculateBMI(int height, int weight) {
+    return weight / (height * height);
   }
 }

@@ -159,10 +159,11 @@ class _MainPageState extends State<MainPage> {
                 children: [
                   const Text("BMI"),
                   Text(
-                    "$bmi",
+                    bmi.toStringAsFixed(2),
                     style: kInputLabelColor.copyWith(
                         color: kTextOutColor, fontSize: 60),
                   ),
+                  Text(getResult(bmi))
                 ],
               ),
             ],
@@ -174,5 +175,15 @@ class _MainPageState extends State<MainPage> {
 
   double calculateBMI(int height, int weight) {
     return weight / (height / 100 * height / 100);
+  }
+
+  String getResult(bmiValue) {
+    if (bmiValue >= 25) {
+      return "Overweight";
+    } else if (bmiValue > 18.5) {
+      return "Normal";
+    } else {
+      return "Underweight";
+    }
   }
 }

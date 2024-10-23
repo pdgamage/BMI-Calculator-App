@@ -23,11 +23,15 @@ class _MainPageState extends State<MainPage> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const Row(
+              Row(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.orange.withAlpha(100),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: const EdgeInsets.all(8.0),
+                    child: const Column(
                       children: [
                         Icon(
                           Icons.male,
@@ -37,10 +41,14 @@ class _MainPageState extends State<MainPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
+                  const Spacer(),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.orange.withAlpha(100),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: const EdgeInsets.all(8.0),
+                    child: const Column(
                       children: [
                         Icon(
                           Icons.female,

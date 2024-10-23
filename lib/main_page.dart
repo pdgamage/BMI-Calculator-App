@@ -12,7 +12,7 @@ class _MainPageState extends State<MainPage> {
   int height = 150;
   int weight = 70;
 
-  double bmi = 0;
+  late double bmi = calculateBMI(height, weight);
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +73,7 @@ class _MainPageState extends State<MainPage> {
                                 setState(() {
                                   if (height > 50) {
                                     height--;
+                                    bmi = calculateBMI(height, weight);
                                   }
                                 });
                               },
@@ -89,6 +90,7 @@ class _MainPageState extends State<MainPage> {
                                 setState(() {
                                   if (height < 220) {
                                     height++;
+                                    bmi = calculateBMI(height, weight);
                                   }
                                 });
                               },
@@ -119,6 +121,7 @@ class _MainPageState extends State<MainPage> {
                                 setState(() {
                                   if (weight > 3) {
                                     weight--;
+                                    bmi = calculateBMI(height, weight);
                                   }
                                 });
                               },
@@ -135,6 +138,7 @@ class _MainPageState extends State<MainPage> {
                                 setState(() {
                                   if (weight < 200) {
                                     weight++;
+                                    bmi = calculateBMI(height, weight);
                                   }
                                 });
                               },
@@ -155,7 +159,7 @@ class _MainPageState extends State<MainPage> {
                 children: [
                   const Text("BMI"),
                   Text(
-                    "22.56",
+                    "$bmi",
                     style: kInputLabelColor.copyWith(
                         color: kTextOutColor, fontSize: 60),
                   ),
@@ -169,6 +173,6 @@ class _MainPageState extends State<MainPage> {
   }
 
   double calculateBMI(int height, int weight) {
-    return weight / (height * height);
+    return weight / (height / 100 * height / 100);
   }
 }
